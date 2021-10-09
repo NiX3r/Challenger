@@ -21,7 +21,8 @@ namespace Challenger.Listeners
                 return;
             }
 
-            ProgramVariables.Data.Guilds.Add(new GuildInstance(arg.Id, arg.Name, arg.OwnerId, arg.Owner.Nickname));
+            if(!ProgramVariables.Data.IsGuildExists(arg.Id))
+                ProgramVariables.Data.Guilds.Add(new GuildInstance(arg.Id, arg.Name, arg.OwnerId, arg.Owner.Username));
 
         }
 

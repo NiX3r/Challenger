@@ -22,11 +22,16 @@ namespace Challenger.Utils
         {
             ProgramVariables._client.MessageReceived += PrivateMessageHandler.PrivateMessage;
             ProgramVariables._client.GuildAvailable += GuildAvaibleHandler.GuildAvaible;
-            //ProgramVariables._client.ReactionAdded += HandleReactionAddedRemovedEvent.HandleReactionAsync;
-            //ProgramVariables._client.ReactionRemoved += HandleReactionAddedRemovedEvent.HandleReactionRemovedAsync;
+            ProgramVariables._client.ReactionAdded += AddReactionHandler.AddReaction;
+            ProgramVariables._client.ReactionRemoved += RemoveActionHandler.RemoveReaction;
             //ProgramVariables._client.Disconnected += HandleDisconnetConnectEvent.HandleDisconnect;
             //ProgramVariables._client.Connected += HandleDisconnetConnectEvent.HandleConnect;
-            ProgramVariables._client.MessageReceived += HandleCommandAsyncEvent.HandleCommandAsync;
+            
+        }
+
+        public static async Task RegisterCommands()
+        {
+            ProgramVariables._client.MessageReceived += CommandAsyncHandler.CommandAsync;
             await ProgramVariables._commands.AddModulesAsync(Assembly.GetEntryAssembly(), ProgramVariables._services);
         }
 

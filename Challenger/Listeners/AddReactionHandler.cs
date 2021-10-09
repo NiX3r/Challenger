@@ -21,7 +21,6 @@ namespace Challenger.Listeners
                 if (!ProgramVariables.Data.IsChallengerExists(reaction.UserId))
                 {
 
-                    Console.WriteLine("Adding challenger");
                     ProgramVariables.Data.Challengers.Add(new ChallengerInstance(reaction.UserId, reaction.User.Value.Username, DateTime.Now, ((SocketGuildChannel)reaction.Channel).Guild.Id, ((SocketGuildChannel)reaction.Channel).Guild.Name));
 
                 }

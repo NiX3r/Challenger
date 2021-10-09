@@ -58,11 +58,31 @@ namespace Challenger.Instances
             return null;
         }
 
+        public ChallengerInstance GetChallenger(ulong ID)
+        {
+            foreach(ChallengerInstance challenger in this.Challengers)
+            {
+                if (challenger.ID == ID)
+                    return challenger;
+            }
+            return null;
+        }
+
         public bool IsChallengerExists(ulong ID)
         {
             foreach(ChallengerInstance challenger in this.Challengers)
             {
                 if (challenger.ID == ID)
+                    return true;
+            }
+            return false;
+        }
+
+        public bool IsGuildExists(ulong ID)
+        {
+            foreach (GuildInstance guild in this.Guilds)
+            {
+                if (guild.ID == ID)
                     return true;
             }
             return false;

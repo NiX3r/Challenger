@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "P:\\CSharp\\Challenger\\Challenger\\Challenger\\Challenger.csproj": {}
+    "P:\\CSharp\\Challenger\\Challenger\\Challenger.csproj": {}
   },
   "projects": {
-    "P:\\CSharp\\Challenger\\Challenger\\Challenger\\Challenger.csproj": {
+    "P:\\CSharp\\Challenger\\Challenger\\Challenger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "P:\\CSharp\\Challenger\\Challenger\\Challenger\\Challenger.csproj",
+        "projectUniqueName": "P:\\CSharp\\Challenger\\Challenger\\Challenger.csproj",
         "projectName": "Challenger",
-        "projectPath": "P:\\CSharp\\Challenger\\Challenger\\Challenger\\Challenger.csproj",
+        "projectPath": "P:\\CSharp\\Challenger\\Challenger\\Challenger.csproj",
         "packagesPath": "C:\\Users\\nixii\\.nuget\\packages\\",
-        "outputPath": "P:\\CSharp\\Challenger\\Challenger\\Challenger\\obj\\",
+        "outputPath": "P:\\CSharp\\Challenger\\Challenger\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -68,9 +68,17 @@
               "target": "Package",
               "version": "[2.4.0, )"
             },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "System.Diagnostics.PerformanceCounter": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             }
           },
           "imports": [

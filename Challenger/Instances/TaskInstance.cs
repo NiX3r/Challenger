@@ -9,7 +9,6 @@ namespace Challenger.Instances
     class TaskInstance
     {
 
-        public int ID { get; }
         public string Name { get; set; }
         public double MaxPoints { get; set; }
         public ulong CreatorID { get; }
@@ -17,12 +16,11 @@ namespace Challenger.Instances
         public DateTime CreateDate { get; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public ulong TextChannelID { get; set; }
-        public ulong TextMessageID { get; set; }
+        public string Message { get; set; }
+        public string Script { get; set; }
 
-        public TaskInstance(int ID, string Name, double MaxPoints, ulong CreatorID, string CreatorName, DateTime CreateDate, DateTime StartDate, DateTime EndDate, ulong TextChannelID, ulong TextMessageID)
+        public TaskInstance(string Name, double MaxPoints, ulong CreatorID, string CreatorName, DateTime CreateDate, DateTime StartDate, DateTime EndDate, string Message, string Script)
         {
-            this.ID = ID;
             this.Name = Name;
             this.MaxPoints = MaxPoints;
             this.CreatorID = CreatorID;
@@ -30,8 +28,8 @@ namespace Challenger.Instances
             this.CreateDate = CreateDate;
             this.StartDate = StartDate;
             this.EndDate = EndDate;
-            this.TextChannelID = TextChannelID;
-            this.TextMessageID = TextMessageID;
+            this.Message = Message;
+            this.Script = Script;
         }
 
     }

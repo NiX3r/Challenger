@@ -22,8 +22,11 @@ namespace Challenger.Listeners
                 {
 
                     ProgramVariables.Data.Challengers.Add(new ChallengerInstance(reaction.UserId, reaction.User.Value.Username, DateTime.Now, ((SocketGuildChannel)reaction.Channel).Guild.Id, ((SocketGuildChannel)reaction.Channel).Guild.Name));
+                    return;
 
                 }
+
+                ProgramVariables.Data.GetChallenger(reaction.UserId).IsActive = true;
 
             }
         }

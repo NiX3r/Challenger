@@ -36,13 +36,23 @@ namespace Challenger.Utils
         public static void SaveData()
         {
 
-            string json = JsonConvert.SerializeObject(ProgramVariables.Data);
+            string json = JsonConvert.SerializeObject(ProgramVariables.Data, Formatting.Indented);
 
             StreamWriter sw = new StreamWriter("data.json");
             sw.Write(json);
             sw.Flush();
             sw.Close();
 
+        }
+
+        public static void CreateTempJson()
+        {
+            string json = JsonConvert.SerializeObject(ProgramVariables.Data, Formatting.Indented);
+
+            StreamWriter sw = new StreamWriter("temp.json");
+            sw.Write(json);
+            sw.Flush();
+            sw.Close();
         }
 
     }

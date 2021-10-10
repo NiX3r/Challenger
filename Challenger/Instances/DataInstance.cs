@@ -88,5 +88,15 @@ namespace Challenger.Instances
             return false;
         }
 
+        public bool IsTaskExists(string name)
+        {
+            foreach(TaskInstance task in this.Tasks)
+            {
+                if (task.Name.Equals(name))
+                    return true;
+            }
+            return false;
+        }
+
     }
 }
